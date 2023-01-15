@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class a1_q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt();
+            if (isPrime(n)) {
+                System.out.println("given no. is prime.");
+            } else {
+                System.out.println("given no. is not prime.");
+            }
+
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int j = 2; j <= Math.sqrt(n); j++) {
+            if (n % j == 0) {
+                return false;
+            }
+
+        }
+        return true;
+
+    }
+
+}
