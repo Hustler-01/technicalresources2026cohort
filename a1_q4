@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class a1_q4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter low:");
+        int a = sc.nextInt();
+        System.out.println("enter high:");
+        int b = sc.nextInt();
+        for (int i = a; i <= b; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int j = 2; j <= Math.sqrt(n); j++) {
+            if (n % j == 0) {
+                return false;
+            }
+
+        }
+        return true;
+
+    }
+
+}
