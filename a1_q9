@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class a1_q9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        int om = m;
+        int on = n;
+        while (m % n != 0) {
+            int rem = m % n;
+            m = n;
+            n = rem;
+        }
+        int gcd = n;
+        int lcm = (om + on) / gcd;
+        System.out.println("GCD: " + gcd);
+        System.out.println("LCM: " + lcm);
+    }
+
+}
